@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,380 @@
     <title>Ba-starter</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Open+Sans:700|Roboto&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/app.css">
 
     <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
-
     <header class="ba-header">
-        <div class="container">
+        <div class="container ba-header-wrap">
+            <div class="ba-header-left">
+                <a href="#" class="ba-logo__link">
+                    <div class="ba-logo-wrap">
+                        <div class="ba-logo__icon">
+                            <svg width=46 height=36>
+                                <use xlink:href='#i-logo'></use>
+                            </svg>
+                        </div>
 
-            <a href="#" class="ba-logo"></a>
+                        <div class="ba-logo__text">
+                            <span class="ba-logo__title">Shoppér</span>
+                            <p class="ba-logo__desc">Buy with happiness</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="ba-header-right">
+                <nav class="ba-nav">
+                    <button class="ba-nav-btn">
+                        <svg width=22 height=22>
+                            <use xlink:href='#i-menu'></use>
+                        </svg>
+                    </button>
 
-            <nav>
-                <ul class="ba-menu">
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                </ul>
-            </nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item" dataCount="8">
+                            <a href="#" class="ba-menu__link">
+                                <img src="img/i-notification.png" alt="news">
+                            </a>
+                        </li>
+                        <li class="ba-menu__item" dataCount="3">
+                            <a href="#" class="ba-menu__link">
+                                <img src="img/i-mail.png" alt="messages">
+                            </a>
+                        </li>
+                        <li class="ba-menu__item" dataCount="8">
+                            <a href="#" class="ba-menu__link">
+                                <img src="img/i-options.png" alt="something">
+                            </a>
+                        </li>
+                    </ul>
 
+                    <div class="ba-nav-search">
+                        <input type="search" id="searchInp" class="ba-nav-search__inp">
+                        <button type="submit" class="ba-nav-search__btn">
+                            <svg width=22 height=22>
+                                <use xlink:href='#i-search'></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="ba-nav-user">
+                        <div class="ba-nav-user__thumb">
+                            <img src="img/avatar.jpg" alt="avatar" class="ba-nav-user__img">
+                        </div>
+                        <span class="ba-nav-user__name">jisan</span>
+                        <span class="ba-nav-user__arrow"></span>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="ba-section">
-            <div class="container">
+    <div class="content">
+
+        <aside class="ba-aside">
+            <div class="ba-aside-wrap">
+                <div class="ba-aside-user">
+                    <div class="ba-aside-user__thumb">
+                        <img src="img/avatar.jpg" alt="avatar" class="ba-aside-user__img">
+                    </div>
+                    <div class="ba-aside-user__info">
+                        <span class="ba-aside-user__name">jahangir alam jisan</span>
+                        <span class="ba-aside-user__position">UX Designer</span>
+                        <ul class="ba-aside-settings">
+                            <li class="ba-aside-settings__item">
+                                <a href="#" class="ba-aside-settings__link">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-profile'></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="ba-aside-settings__item">
+                                <a href="#" class="ba-aside-settings__link">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-message'></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="ba-aside-settings__item">
+                                <a href="#" class="ba-aside-settings__link">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-logout'></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="ba-aside-nav">
+                    <div class="ba-aside-general">
+                        <h2 class="ba-aside__title">General</h2>
+                        <ul class="ba-aside-options">
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Dashboard</h3>
+                                    <span class="ba-aside-options__arrow">7</span>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Layouts</h3>
+                                    <span class="ba-aside-options__arrow">7</span>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Pages</h3>
+                                    <span class="ba-aside-options__arrow">7</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ba-aside-elements">
+                        <h2 class="ba-aside__title">Elements</h2>
+                        <ul class="ba-aside-options">
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Dashboard</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Layouts</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Pages</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Dashboard</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Layouts</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Pages</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Dashboard</h3>
+                                </div>
+                            </li>
+                            <li class="ba-aside-options__item">
+                                <div class="ba-aside-options-wrap">
+                                    <div class="ba-aside-settings__icon">
+                                        <svg width=22 height=22>
+                                            <use xlink:href='#i-monitor'></use>
+                                        </svg>
+                                    </div>
+                                    <h3 class="ba-aside-options__name">Layouts</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
             </div>
-        </section>
-    </main>
-    
-    <footer class="ba-footer">
-        <div class="container">
-            
-        </div>
-    </footer>
+        </aside>
+
+
+        <main>
+            <section class="ba-section ba-head">
+                <div class="container ba-head-wrap">
+                    <p class="ba-head__pagepath">
+                        <a href="#" class="ba-head__link">Dashboard</a>
+                        <a href="#" class="ba-head__link">Home</a>
+                        <a href="#" class="ba-head__link">All site view</a>
+                    </p>
+                    <form action="#" class="ba-head-form">
+                        <label for="ba-head__select">Reporing period</label>
+                        <select name="ba-head__select" id="ba-head__select" class="ba-head__select">
+                            <option value="month" selected>Last 30 day's</option>
+                            <option value="week">Last 7 day's</option>
+                            <option value="3 days">Last 3 day's</option>
+                        </select>
+                    </form>
+                </div>
+            </section>
+
+            <section class="ba-section ba-top">
+                <div class="container">
+                    <div class="ba-row ba-top-wrap">
+                        <div class="ba-col-3 ba-top__info">
+                            <img src="img/c-top-1.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                        <div class="ba-col-3 ba-top__info">
+                            <img src="img/c-top-2.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                        <div class="ba-col-3 ba-top__info">
+                            <img src="img/c-top-3.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                        <div class="ba-col-3 ba-top__info">
+                            <img src="img/c-top-4.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                    </div>
+                    <div class="ba-row ba-statistics-wrap">
+                        <div class="ba-col-12 ba-statistics__data">
+                            <img src="img/c-statistics.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                    </div>
+                    <div class="ba-row ba-research-wrap">
+                        <div class="ba-col-8 ba-research__map">
+                            <img src="img/c-map.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                        <div class="ba-col-4 ba-research__traffic">
+                            <img src="img/c-traffic.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                    </div>
+                    <div class="ba-row ba-order-wrap">
+                        <div class="ba-col-12 ba-order__info">
+                            <img src="img/c-order.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                    </div>
+                    <div class="ba-row ba-numbers-wrap">
+                        <div class="ba-col-6 ba-numbers__visits">
+                            <img src="img/c-visits.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                        <div class="ba-col-6 ba-numbers__campaign">
+                            <img src="img/c-campaign.jpg" alt="visitors" class="ba-top__img">
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="visually-hidden">
+        <svg width=0 height=0>
+
+            <symbol id="i-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 36">
+                <path
+                    d="M2.876.719L.082 10.907s-.845 1.948 2.941 2.997c0 0 3.382.038 3.529 0 .147-.037 3.05-.861 3.087-3.446l1.47-9.739H2.876z" />
+                <path
+                    d="M2.876.719L.082 10.907s-.845 1.948 2.941 2.997c0 0 3.382.038 3.529 0 .147-.037 3.05-.861 3.087-3.446l1.47-9.739H2.876z" />
+                <path
+                    d="M12.286.869l-1.471 10.638s.331 2.023 3.382 2.397c0 0 2.389.113 3.382-.15 0 0 2.352-.262 2.94-2.696V.869h-8.233z" />
+                <path
+                    d="M12.286.869l-1.471 10.638s.331 2.023 3.382 2.397c0 0 2.389.113 3.382-.15 0 0 2.352-.262 2.94-2.696V.869h-8.233z" />
+                <path d="M21.695.869v10.638s.515 2.06 3.676 2.397h3.088s3.418-.861 2.646-3.446L29.782.869h-8.087z" />
+                <path d="M21.695.869v10.638s.515 2.06 3.676 2.397h3.088s3.418-.861 2.646-3.446L29.782.869h-8.087z" />
+                <path
+                    d="M30.958.869l1.47 10.788s.331 1.76 3.529 2.247h3.088s3.639-.899 2.793-3.596L39.045.869h-8.087z" />
+                <path
+                    d="M30.958.869l1.47 10.788s.331 1.76 3.529 2.247h3.088s3.639-.899 2.793-3.596L39.045.869h-8.087z" />
+                <path
+                    d="M16.991 35.991V19.509H6.405v16.332H1.553V15.464c2.94.636 5.146.149 5.146.149 3.308-.337 3.528-3.146 3.528-3.146.184 2.66 3.382 3.297 3.382 3.297h3.823c3.087-.488 3.675-2.847 3.675-2.847.221 2.022 3.235 2.847 3.235 2.847h3.97c3.124-.713 3.528-2.847 3.528-2.847 1.36 4.232 8.528 2.547 8.528 2.547v20.527H16.991zm18.672-16.482H22.284v10.938h13.379V19.509z" />
+                <path
+                    d="M16.991 35.991V19.509H6.405v16.332H1.553V15.464c2.94.636 5.146.149 5.146.149 3.308-.337 3.528-3.146 3.528-3.146.184 2.66 3.382 3.297 3.382 3.297h3.823c3.087-.488 3.675-2.847 3.675-2.847.221 2.022 3.235 2.847 3.235 2.847h3.97c3.124-.713 3.528-2.847 3.528-2.847 1.36 4.232 8.528 2.547 8.528 2.547v20.527H16.991zm18.672-16.482H22.284v10.938h13.379V19.509z" />
+
+            </symbol>
+
+            <symbol id="i-search" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m551.13 526.776-186.785-186.785c30.506-36.023 49.003-82.523 49.003-133.317 0-113.967-92.708-206.674-206.674-206.674s-206.674 92.707-206.674 206.674 92.707 206.674 206.674 206.674c50.794 0 97.294-18.497 133.317-49.003l186.785 186.785s24.354-24.354 24.354-24.354zm-344.456-147.874c-94.961 0-172.228-77.267-172.228-172.228s77.267-172.228 172.228-172.228 172.228 77.267 172.228 172.228-77.267 172.228-172.228 172.228z" />
+            </symbol>
+
+            <symbol id="i-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 18">
+                <path
+                    d="M4.956,5.815 C4.956,5.606 4.772,5.422 4.563,5.422 C4.465,5.422 4.354,5.458 4.280,5.532 L0.743,9.070 C0.669,9.144 0.632,9.254 0.632,9.352 C0.632,9.451 0.669,9.561 0.743,9.635 L4.280,13.172 C4.354,13.246 4.465,13.283 4.563,13.283 C4.772,13.283 4.956,13.099 4.956,12.890 L4.956,5.815 ZM22.251,15.248 C22.251,15.039 22.067,14.855 21.858,14.855 L0.632,14.855 C0.423,14.855 0.239,15.039 0.239,15.248 L0.239,17.607 C0.239,17.816 0.423,18.000 0.632,18.000 L21.858,18.000 C22.067,18.000 22.251,17.816 22.251,17.607 L22.251,15.248 ZM22.251,10.531 C22.251,10.323 22.067,10.138 21.858,10.138 L8.494,10.138 C8.285,10.138 8.100,10.323 8.100,10.531 L8.100,12.890 C8.100,13.099 8.285,13.283 8.494,13.283 L21.858,13.283 C22.067,13.283 22.251,13.099 22.251,12.890 L22.251,10.531 ZM22.251,5.815 C22.251,5.606 22.067,5.422 21.858,5.422 L8.494,5.422 C8.285,5.422 8.100,5.606 8.100,5.815 L8.100,8.173 C8.100,8.382 8.285,8.566 8.494,8.566 L21.858,8.566 C22.067,8.566 22.251,8.382 22.251,8.173 L22.251,5.815 ZM22.251,1.098 C22.251,0.889 22.067,0.705 21.858,0.705 L0.632,0.705 C0.423,0.705 0.239,0.889 0.239,1.098 L0.239,3.456 C0.239,3.665 0.423,3.849 0.632,3.849 L21.858,3.849 C22.067,3.849 22.251,3.665 22.251,3.456 L22.251,1.098 Z" />
+            </symbol>
+
+            <symbol id="i-profile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+                </path>
+            </symbol>
+
+            <symbol id="i-message" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                    d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z">
+                </path>
+            </symbol>
+
+            <symbol id="i-logout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                    d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z">
+                </path>
+            </symbol>
+
+            <symbol id="i-monitor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                    d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z">
+                </path>
+            </symbol>
+
+        </svg>
+    </div>
 
 </body>
+
 </html>
